@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Excelling Elites - Cute Tutoring Services ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pastel-purple: #C8B6FF;
+            --pastel-pink: #FFD6FF;
+            --pastel-blue: #BBD0FF;
+            --pastel-yellow: #FDFFB6;
+            --pastel-green: #CAFFBF;
+            --pastel-peach: #FFADAD;
+            --pastel-lavender: #E0C3FC;
+            --dark-purple: #7B2CBF;
+            --text-dark: #2D1B4E;
+            --text-soft: #5A4A6A;
+            --white: #FFFFFF;
+            --cream: #FFF9F0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(200, 182, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 214, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(187, 208, 255, 0.1) 0%, transparent 50%);
+        }
+
+        /* Cute Floating Elements */
+        .floating-shape {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+            animation: float-rotate 20s infinite ease-in-out;
+        }
+
+        .shape-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 3rem;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            top: 60%;
+            right: 5%;
+            font-size: 2.5rem;
+            animation-delay: 5s;
+        }
+
+        .shape-3 {
+            bottom: 20%;
+            left: 10%;
+            font-size: 2rem;
+            animation-delay: 10s;
+        }
+
+        .shape-4 {
+            top: 40%;
+            right: 15%;
+            font-size: 2.5rem;
+            animation-delay: 15s;
+        }
+
+        @keyframes float-rotate {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(20px) rotate(-5deg); }
+        }
+
+        /* Navigation - Cute Style */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            box-shadow: 0 4px 20px rgba(200, 182, 255, 0.2);
+            border-bottom: 3px solid var(--pastel-purple);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-purple), var(--pastel-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '✨';
+            font-size: 1.5rem;
+            -webkit-text-fill-color: initial;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            background: transparent;
+        }
+
+        .nav-links a:hover {
+            background: var(--pastel-yellow);
+            color: var(--dark-purple);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(253, 255, 182, 0.5);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-purple);
+            background: var(--pastel-purple);
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Hero Section - Super Cute */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 5rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--pastel-pink) 50%, var(--pastel-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200, 182, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 214, 255, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            opacity: 0;
+            animation: bounceIn 1s ease forwards;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(135deg, var(--dark-purple), var(--pastel-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .hero-content h1 span::after {
+            content: '✨';
+            position: absolute;
+            right: -30px;
+            top: -10px;
+            font-size: 1.5rem;
+            -webkit-text-fill-color: initial;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            60% { opacity: 1; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--dark-purple);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideInLeft 0.8s ease 0.3s forwards;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-subtitle::before {
+            content: '🌟';
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--text-soft);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideInLeft 0.8s ease 0.5s forwards;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1.5rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--pastel-purple);
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: slideInLeft 0.8s ease 0.7s forwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pastel-purple), var(--dark-purple));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(123, 44, 191, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--dark-purple);
+            border: 3px solid var(--pastel-purple);
+            box-shadow: 0 4px 15px rgba(200, 182, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pastel-yellow);
+            border-color: var(--pastel-yellow);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .hero-image {
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 
+                0 20px 60px rgba(123, 44, 191, 0.2),
+                0 0 0 8px rgba(255, 255, 255, 0.5),
+                0 0 0 12px var(--pastel-purple);
+            transition: all 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02) rotate(1deg);
+            box-shadow: 
+                0 25px 70px rgba(123, 44, 191, 0.3),
+                0 0 0 8px rgba(255, 255, 255, 0.8),
+                0 0 0 12px var(--pastel-pink);
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            animation: float-cute 3s ease-in-out infinite;
+            font-weight: 700;
+            color: var(--dark-purple);
+            border: 3px solid var(--pastel-yellow);
+        }
+
+        .floating-badge.badge-1 {
+            top: 5%;
+            left: -15%;
+            animation-delay: 0s;
+        }
+
+        .floating-badge.badge-2 {
+            bottom: 10%;
+            right: -10%;
+            animation-delay: 1.5s;
+            background: var(--pastel-yellow);
+        }
+
+        .floating-badge.badge-3 {
+            top: 40%;
+            right: -20%;
+            animation-delay: 0.75s;
+            background: var(--pastel-green);
+        }
+
+        @keyframes float-cute {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .floating-badge .emoji {
+            font-size: 1.5rem;
+        }
+
+        /* Section Styles - Cute */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '✦';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--pastel-purple);
+            font-size: 1.5rem;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.5; transform: translateX(-50%) scale(1.2); }
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--pastel-yellow);
+            color: var(--dark-purple);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(253, 255, 182, 0.5);
+        }
+
+        .section-title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pastel-purple), var(--pastel-pink));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-soft);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 5px solid var(--white);
+        }
+
+        .about-image::before {
+            content: '🎓';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .about-content h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2rem;
+            color: var(--dark-purple);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-soft);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px) rotate(2deg);
+            border-color: var(--pastel-purple);
+            box-shadow: 0 15px 30px rgba(200, 182, 255, 0.3);
+        }
+
+        .value-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .value-card h4 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Curriculums Section */
+        .curriculums {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-pink) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .curriculums::before {
+            content: '📚';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float-slow 10s infinite;
+        }
+
+        .curriculums::after {
+            content: '✏️';
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float-slow 10s infinite 5s;
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+
+        .curriculums-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .curriculum-card {
+            background: var(--white);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid transparent;
+        }
+
+        .curriculum-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--pastel-purple), var(--pastel-pink), var(--pastel-blue));
+        }
+
+        .curriculum-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(123, 44, 191, 0.15);
+            border-color: var(--pastel-purple);
+        }
+
+        .curriculum-card.featured {
+            border: 4px solid var(--pastel-yellow);
+            transform: scale(1.05);
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+        }
+
+        .curriculum-card.featured:hover {
+            transform: scale(1.05) translateY(-15px);
+        }
+
+        .badge-cute {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--pastel-peach), var(--pastel-pink));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            animation: wiggle 2s infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .curriculum-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(200, 182, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .curriculum-card:hover .curriculum-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .curriculum-card h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .curriculum-subtitle {
+            color: var(--pastel-purple);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .curriculum-card p {
+            color: var(--text-soft);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--pastel-green), var(--pastel-yellow));
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(202, 255, 191, 0.4);
+        }
+
+        .curriculum-features {
+            list-style: none;
+        }
+
+        .curriculum-features li {
+            padding: 0.6rem 0;
+            color: var(--text-soft);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .curriculum-features li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: var(--pastel-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--dark-purple);
+            font-size: 0.8rem;
+        }
+
+        .help-text {
+            text-align: center;
+            color: var(--text-soft);
+            font-weight: 600;
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 0 auto;
+            display: block;
+            max-width: fit-content;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--white);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--pastel-blue), transparent);
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            border: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(200, 182, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .service-card:hover {
+            background: var(--white);
+            border-color: var(--pastel-purple);
+            box-shadow: 0 15px 40px rgba(200, 182, 255, 0.2);
+            transform: translateY(-8px) rotate(1deg);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 20px rgba(200, 182, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .service-header h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+        }
+
+        .service-card > p {
+            color: var(--text-soft);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .service-features li::before {
+            content: '★';
+            color: var(--pastel-yellow);
+            font-size: 1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--white), var(--cream));
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--pastel-yellow);
+            box-shadow: 0 10px 30px rgba(253, 255, 182, 0.4);
+        }
+
+        .benefit-item .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .benefit-item h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background: linear-gradient(135deg, var(--dark-purple) 0%, var(--pastel-purple) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .why-us-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-us .section-label {
+            background: var(--pastel-yellow);
+            color: var(--dark-purple);
+        }
+
+        .why-us .section-title,
+        .why-us .section-subtitle {
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.25);
+            border-color: var(--pastel-yellow);
+        }
+
+        .stat-number {
+            font-family: 'Nunito', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            display: block;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-box {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-box:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-8px) rotate(2deg);
+            border-color: var(--pastel-yellow);
+        }
+
+        .feature-box .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-box h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .ratings {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .rating-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+
+        .rating-value {
+            font-family: 'Nunito', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-peach));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .rating-label {
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(to bottom, var(--cream), var(--white));
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '💬';
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            font-size: 5rem;
+            opacity: 0.05;
+        }
+
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            position: relative;
+            transition: all 0.3s ease;
+            border: 4px solid transparent;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pastel-purple);
+            box-shadow: 0 15px 40px rgba(200, 182, 255, 0.2);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 5rem;
+            color: var(--pastel-purple);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .stars {
+            color: var(--pastel-yellow);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            color: var(--text-soft);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(200, 182, 255, 0.4);
+        }
+
+        .author-info h4 {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .author-info span {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(200, 182, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 214, 255, 0.1) 0%, transparent 20%);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info > p {
+            color: var(--text-soft);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: var(--cream);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .contact-item:hover {
+            background: linear-gradient(135deg, var(--pastel-purple), var(--dark-purple));
+            color: var(--white);
+            transform: translateX(10px);
+            border-color: var(--pastel-yellow);
+        }
+
+        .contact-item:hover .contact-icon {
+            background: var(--white);
+            color: var(--dark-purple);
+        }
+
+        .contact-item:hover h4,
+        .contact-item:hover p {
+            color: var(--white);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item h4 {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .call-box {
+            background: linear-gradient(135deg, var(--pastel-purple), var(--dark-purple));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(123, 44, 191, 0.3);
+            border: 4px solid var(--pastel-yellow);
+        }
+
+        .call-box h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .call-box p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .call-box a {
+            color: var(--pastel-yellow);
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .call-box a:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 4px solid var(--pastel-purple);
+        }
+
+        .contact-form h3 {
+            font-family: 'Nunito', sans-serif;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 3px solid var(--pastel-blue);
+            border-radius: 15px;
+            background: var(--white);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--pastel-purple);
+            box-shadow: 0 0 0 4px rgba(200, 182, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Developer Credit Section */
+        .developer-credit {
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
+            padding: 3rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .developer-credit::before {
+            content: '✨';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 3rem;
+            opacity: 0.2;
+            animation: float 4s infinite;
+        }
+
+        .developer-credit::after {
+            content: '🚀';
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            font-size: 3rem;
+            opacity: 0.2;
+            animation: float 4s infinite 2s;
+        }
+
+        .developer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .developer-content h3 {
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .developer-content p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .developer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .developer-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--dark-purple), var(--pastel-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .developer-info {
+            text-align: left;
+        }
+
+        .developer-info h4 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .developer-info span {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        .developer-social {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .developer-social a {
+            width: 45px;
+            height: 45px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-purple);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .developer-social a:hover {
+            transform: translateY(-5px) rotate(10deg);
+            background: var(--pastel-yellow);
+            color: var(--dark-purple);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-links a:hover {
+            background: var(--pastel-purple);
+            transform: translateY(-5px) rotate(10deg);
+            border-color: var(--pastel-yellow);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--pastel-yellow);
+            text-decoration: none;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
+            border: 3px solid var(--white);
+            font-size: 1.2rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-peach));
+            color: var(--dark-purple);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .floating-badge {
+                display: none;
+            }
+
+            .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .curriculum-card.featured {
+                transform: none;
+            }
+
+            .curriculum-card.featured:hover {
+                transform: translateY(-15px);
+            }
+
+            .about-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .stats-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ratings {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .developer-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .developer-info {
+                text-align: center;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Cute decorative elements */
+        .deco-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--pastel-purple);
+            top: 10%;
+            left: -5%;
+        }
+
+        .blob-2 {
+            width: 250px;
+            height: 250px;
+            background: var(--pastel-pink);
+            bottom: 10%;
+            right: -5%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-shape shape-1">📚</div>
+    <div class="floating-shape shape-2">✨</div>
+    <div class="floating-shape shape-3">🎓</div>
+    <div class="floating-shape shape-4">⭐</div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                Excelling Elites
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#curriculums">Curriculums</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Lighting up the road to excellence</p>
+                <h1>Ace Your Exams with <span>Excelling Elites</span></h1>
+                <p class="hero-description">
+                    Professional tutoring services for CAPS, IEB, and Cambridge curriculums. 
+                    Personalized learning that transforms students into academic achievers! 🌟
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Get Started <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://kimi-web-img.moonshot.cn/img/thumbs.dreamstime.com/3b2c17fc2bec1e97d4504e2d20295471af99d0fa.jpg" alt="Cute teacher with students">
+                <div class="floating-badge badge-1">
+                    <span class="emoji">🎯</span>
+                    <span>95% Success</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <span class="emoji">👨‍🎓</span>
+                    <span>500+ Students</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <span class="emoji">⭐</span>
+                    <span>4.9 Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <span class="section-label">About Us</span>
+                <h2 class="section-title">Who We Are</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://kimi-web-img.moonshot.cn/img/media.istockphoto.com/e0ab4d356ca3bf107bd57ca19a2debf34cad0aed.jpg" alt="Teacher helping student">
+                </div>
+                <div class="about-content">
+                    <h3>🌟 Excelling Elites</h3>
+                    <p>
+                        Excelling Elites is a premier tutoring company dedicated to helping students achieve academic success. 
+                        We believe every student has the potential to excel with the right guidance and support!
+                    </p>
+                    
+                    <h3>🎯 Our Mission</h3>
+                    <p>
+                        To provide high-quality, personalized tutoring that empowers students to achieve academic excellence. 
+                        We make complex concepts simple and build confident, independent learners!
+                    </p>
+
+                    <h3>🔮 Our Vision</h3>
+                    <p>
+                        To become South Africa's most trusted tutoring partner, known for transforming students into academic achievers. 
+                        We light up paths to excellence! ✨
+                    </p>
+
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <span class="emoji">🏆</span>
+                            <h4>Excellence</h4>
+                            <p>Striving for the best in every lesson!</p>
+                        </div>
+                        <div class="value-card">
+                            <span class="emoji">💡</span>
+                            <h4>Innovation</h4>
+                            <p>Unique learning for every student!</p>
+                        </div>
+                        <div class="value-card">
+                            <span class="emoji">❤️</span>
+                            <h4>Passion</h4>
+                            <p>Love for education and growth!</p>
+                        </div>
+                        <div class="value-card">
+                            <span class="emoji">🌱</span>
+                            <h4>Growth</h4>
+                            <p>Building confidence daily!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculums Section -->
+    <section class="curriculums" id="curriculums">
+        <div class="curriculums-container">
+            <div class="section-header">
+                <span class="section-label">Our Curriculums</span>
+                <h2 class="section-title">Curriculums We Cover</h2>
+                <p class="section-subtitle">
+                    We provide expert tutoring across all major South African and international curriculums! 📚
+                </p>
+            </div>
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <div class="curriculum-icon">📖</div>
+                    <h3>CAPS</h3>
+                    <span class="curriculum-subtitle">Curriculum and Assessment Policy Statement</span>
+                    <p>The South African national curriculum designed to ensure every child acquires necessary knowledge and skills!</p>
+                    <span class="grade-badge">Grades R - 12</span>
+                    <ul class="curriculum-features">
+                        <li>Comprehensive coverage of all subjects</li>
+                        <li>Aligned with DBE requirements</li>
+                        <li>Grade R to Grade 12 support</li>
+                        <li>Exam preparation and past papers</li>
+                        <li>Simplified study notes</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card featured">
+                    <span class="badge-cute">Most Popular ⭐</span>
+                    <div class="curriculum-icon">🎓</div>
+                    <h3>IEB</h3>
+                    <span class="curriculum-subtitle">Independent Examinations Board</span>
+                    <p>A prestigious assessment body offering internationally benchmarked examinations!</p>
+                    <span class="grade-badge">Grades 10 - 12</span>
+                    <ul class="curriculum-features">
+                        <li>Advanced academic curriculum</li>
+                        <li>Critical thinking development</li>
+                        <li>Comprehensive subject support</li>
+                        <li>Mock exam sessions</li>
+                        <li>University preparation focus</li>
+                    </ul>
+                </div>
+
+                <div class="curriculum-card">
+                    <div class="curriculum-icon">🌍</div>
+                    <h3>Cambridge</h3>
+                    <span class="curriculum-subtitle">Cambridge International Education</span>
+                    <p>Globally recognized qualifications that open doors to universities worldwide!</p>
+                    <span class="grade-badge">IGCSE & A-Level</span>
+                    <ul class="curriculum-features">
+                        <li>International qualification</li>
+                        <li>IGCSE & A-Level support</li>
+                        <li>Global university recognition</li>
+                        <li>English language excellence</li>
+                        <li>Worldwide career opportunities</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="help-text">💬 Not sure which curriculum is right for you? Contact us for a free consultation!</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">
+                    Comprehensive tutoring services designed for academic success! 🚀
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">📝</div>
+                        <h3>Simplified Notes</h3>
+                    </div>
+                    <p>Complex topics broken down into easy-to-understand study materials that make learning fun!</p>
+                    <ul class="service-features">
+                        <li>Color-coded key concepts</li>
+                        <li>Visual diagrams & illustrations</li>
+                        <li>Summary sheets for quick revision</li>
+                        <li>Topic-by-topic breakdown</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🎯</div>
+                        <h3>Exam Preparation</h3>
+                    </div>
+                    <p>Comprehensive exam readiness program with past papers, mock tests, and strategic study plans!</p>
+                    <ul class="service-features">
+                        <li>Past paper practice sessions</li>
+                        <li>Time management techniques</li>
+                        <li>Exam strategy coaching</li>
+                        <li>Mock exam simulations</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">👤</div>
+                        <h3>Individualised Teaching</h3>
+                    </div>
+                    <p>One-on-one attention tailored to each student's learning pace, style, and academic goals!</p>
+                    <ul class="service-features">
+                        <li>Personalized learning plans</li>
+                        <li>Flexible scheduling options</li>
+                        <li>Progress tracking & feedback</li>
+                        <li>Strength-focused approach</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">✨</div>
+                        <h3>Additional Benefits</h3>
+                    </div>
+                    <p>Extra perks that make our tutoring service stand out from the rest!</p>
+                    <ul class="service-features">
+                        <li>Flexible Hours - Your schedule!</li>
+                        <li>All Subjects - Complete coverage!</li>
+                        <li>Expert Tutors - Qualified pros!</li>
+                        <li>Online & In-person options!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="emoji">⏰</span>
+                    <h4>Flexible Hours</h4>
+                </div>
+                <div class="benefit-item">
+                    <span class="emoji">📚</span>
+                    <h4>All Subjects</h4>
+                </div>
+                <div class="benefit-item">
+                    <span class="emoji">👨‍🏫</span>
+                    <h4>Expert Tutors</h4>
+                </div>
+                <div class="benefit-item">
+                    <span class="emoji">💻</span>
+                    <h4>Online Options</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="why-us-container">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">The Excelling Elites Difference</h2>
+                <p class="section-subtitle">
+                    We go above and beyond to ensure every student achieves their academic goals! 🌟
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Success Rate</span>
+                    <p>Proven Results</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Expert Tutors</span>
+                    <p>Qualified Professionals</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Students Helped</span>
+                    <p>Quality Guaranteed</p>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <span class="emoji">🎧</span>
+                    <h3>24/7 Support</h3>
+                    <p>Always here when you need us!</p>
+                </div>
+                <div class="feature-box">
+                    <span class="emoji">🎨</span>
+                    <h3>100% Personalized</h3>
+                    <p>Tailored to your unique needs!</p>
+                </div>
+                <div class="feature-box">
+                    <span class="emoji">💰</span>
+                    <h3>3 Package Options</h3>
+                    <p>Affordable rates for everyone!</p>
+                </div>
+            </div>
+
+            <div class="ratings">
+                <div class="rating-item">
+                    <div class="rating-value">98%</div>
+                    <div class="rating-label">Parent Satisfaction</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-value">4.9/5</div>
+                    <div class="rating-label">Student Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">
+                    Don't just take our word for it! Here's what students say about us! 💬
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excelling Elites transformed my daughter's approach to Mathematics. She went from struggling to achieving distinctions! The personalized attention made all the difference! 🌟"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <span>Parent, Cape Town</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The IEB preparation was exceptional! My tutor knew exactly what to focus on and helped me achieve 3 distinctions. Highly recommend! 🎓"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TJ</div>
+                        <div class="author-info">
+                            <h4>Thabo J.</h4>
+                            <span>Matric Student, Johannesburg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "As a Cambridge student, finding specialized tutors was hard. Excelling Elites matched me with an amazing tutor who understood everything perfectly! 🌍"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <h4>Lisa P.</h4>
+                            <span>A-Level Student, Durban</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-label" style="text-align: left; display: inline-block;">Contact Us</span>
+                <h3>📞 Get In Touch</h3>
+                <p>Ready to start your journey to academic excellence? Contact us today! ✨</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p>+27 71 307 1776</p>
+                            <p>+27 63 668 1502</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>excellingelites@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday</p>
+                            <p>08:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="call-box">
+                    <h4>📱 Prefer to Call?</h4>
+                    <p>Speak directly with our team!</p>
+                    <a href="tel:+27713071776">+27 71 307 1776</a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>✉️ Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">👤 First Name</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">👤 Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">📧 Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">📱 Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+27 XX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="curriculum">📚 Curriculum</label>
+                        <select id="curriculum" name="curriculum">
+                            <option value="">Select Curriculum</option>
+                            <option value="caps">CAPS</option>
+                            <option value="ieb">IEB</option>
+                            <option value="cambridge">Cambridge</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">💬 Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your tutoring needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        Send Message <span style="margin-left: 0.5rem;">🚀</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Credit Section -->
+    <section class="developer-credit">
+        <div class="developer-content">
+            <h3>✨ Website Crafted with Love ✨</h3>
+            <p>This beautiful website was designed and developed with passion and attention to detail!</p>
+            
+            <div class="developer-badge">
+                <div class="developer-avatar">👨‍💻</div>
+                <div class="developer-info">
+                    <h4>Matshika Thokozani</h4>
+                    <span>Web Developer & Designer</span>
+                </div>
+            </div>
+
+            <div class="developer-social">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                ✨ Excelling Elites
+            </div>
+            <p class="footer-text">
+                Lighting up the road to excellence! Professional tutoring services for CAPS, IEB, and Cambridge curriculums. 🌟
+            </p>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Excelling Elites. All rights reserved. | Made with 💜 by <a href="#developer">Your Name</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                scrollTop.classList.add('visible');
+            } else {
+                navbar.classList.remove('scrolled');
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form submission with cute alert
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Create cute custom alert
+            const alertBox = document.createElement('div');
+            alertBox.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 2rem;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+                z-index: 10000;
+                text-align: center;
+                border: 4px solid #C8B6FF;
+                max-width: 90%;
+                width: 400px;
+            `;
+            alertBox.innerHTML = `
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+                <h3 style="color: #7B2CBF; margin-bottom: 1rem; font-family: Nunito, sans-serif;">Message Sent!</h3>
+                <p style="color: #5A4A6A; margin-bottom: 1.5rem;">Thank you for reaching out! We'll get back to you within 24 hours! ✨</p>
+                <button onclick="this.parentElement.remove()" style="background: linear-gradient(135deg, #C8B6FF, #7B2CBF); color: white; border: none; padding: 0.8rem 2rem; border-radius: 25px; cursor: pointer; font-weight: 700;">Awesome!</button>
+            `;
+            document.body.appendChild(alertBox);
+            e.target.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+
+        // Add floating animation to emojis randomly
+        setInterval(() => {
+            const emojis = document.querySelectorAll('.emoji');
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            randomEmoji.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                randomEmoji.style.transform = 'scale(1)';
+            }, 300);
+        }, 3000);
+    </script>
+</body>
+</html>
